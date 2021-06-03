@@ -35,7 +35,7 @@ function noneExistPages()
 function requestByTime()
 {
     awk '{ print $4; }' "$1" | awk -F ':' '{print $2; }' | uniq -c |  column -t | head -n 1 | awk '{print $2}'> output/result_requstByTime.txt
-} # awk '{ print $4; }' "$1" | awk -F ':' '{print $2; }' | uniq -c | sort -nr | column -t | head -n 1 | awk '{print $2}'
+}
 
 function searchBots()
 {
